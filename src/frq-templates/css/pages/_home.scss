@@ -1,0 +1,6 @@
+.home{
+  padding: 50px;
+  @include respondmax(lg){
+    padding: 0;
+  }
+}

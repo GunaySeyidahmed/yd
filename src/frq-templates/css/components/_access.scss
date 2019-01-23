@@ -1,0 +1,84 @@
+.access{
+  &__media{
+    position: relative;
+    width: 100%;
+  }
+
+  &__overlay{
+    box-shadow: rgba(0,0,0,.16%);
+    background-color: $white;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+  }
+
+  &__backBox{
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 640px;
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__logoBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+  }
+  &__form{
+    label{
+      color: $lightGray;
+      font-size: 2rem;
+      font-family: $SanFrancisco-Regular;
+      margin-bottom: 15px;
+    }
+    .form-control{
+      padding: 15px 20px;
+      line-height: 45px;
+      border-radius: 45px;
+      height: 45px;
+      min-width: 436px;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      border-color: $lightGray;
+      @include respondmax(md){
+        min-width: 200px;
+      }
+    }
+    .form-control::placeholder {
+        color:$lightGray;
+        opacity: .5;
+        font-size: 1.5rem;
+    }
+  }
+  &__title{
+    font-size:4rem;
+    font-family: $SanFrancisco-Black;
+    margin-bottom: 40px;
+    &--blue{
+      color: $blue;
+    }
+  }
+  &__submit{
+    min-width: 139px;
+    height: 51px;
+    background-color: $blue;
+    border-radius: 51px;
+    color: $white;
+    font-size: 2rem;
+    transition: all .3s;
+    margin-bottom: 50px;
+    &:hover{
+      background-color: #0963b5;
+    }
+  }
+}
